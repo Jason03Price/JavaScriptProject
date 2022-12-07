@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+   
+   <head>
+       
+    <title>Inagh Weightlifting</title>   
+       
+      <meta charset="utf-8"> 
+       
+    <meta name="viewport" content ="width=device-width, initial scale=1.0">
+       
+   <link rel="stylesheet" href="CSS/Styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+      <link rel="icon" type="image/x-icon" href="images/Logo%20500x500%20px.jpeg">
+       
+       <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+       
+        <script>
+    function myFunction(){ //Function to control nav bar
+        var x = document.getElementById("myTopNav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className= "topnav";
+        }
+    }
+             $(function() {
+     n = new Date();
+     y = n.getFullYear();
+     m = n.getMonth() + 1;
+     d = n.getDate();
+     document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    });
+    </script>
+      
+       
+     </head> 
+    
+    <body>
+
+        <header> </header>
+            
+         <div class="topnav" id="myTopNav">
+          <a href="index.html">Home</a>
+        <a href="LoginOrSignUp.html">Login/SignUp</a>
+        <a href="news.html">Events</a>
+        <a href="Images.html" class="active">Pictures</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="Links.html">Useful Info</a>
+        
+             <a href="Index.html"><img src="images/logo2.jpg" alt="Logo" id="logoIcon"></a> 
+             
+             <div class="search-container">
+  <div class="search-icon-btn">
+    <i class="fa fa-search"></i>
+  </div>
+  <div class="search-input">
+    <input type="search" class="search-bar" placeholder="Search...">
+  </div>
+</div>
+             
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>    
+        </a>
+          
+        </div>
+         
+         <div class="Container-Pictures">
+        
+         <div class="container-Images">
+             
+         <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+      <img src="images/Q1.jpg" style="width:100%" alt="A man farmer's walking with dumbbells in the beautiful sun"> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        </div>
+
+        <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/Q2.jpg" style="width:100%" alt="A showcase of dumbbells">
+        </div> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+
+        <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/Q3.jpg" style="width:100%" alt="A man getting ready for an evening walk in the beautiful evening"> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        </div>
+
+        <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/Squat.jpg" style="width:100%" alt="Squat rack within the Inagh Facility">
+        </div>
+
+        <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/Q5.jpg" style="width:100%" alt="A man preparing mentally to deadlift with heavy weight"> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        </div>
+
+        <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/Q6.jpg" style="width:100%" alt="A strong athlete performing a pull-up">    
+        </div> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  
+      <div class="caption-container">
+        <p id="caption">Images</p>
+      </div>
+
+ 
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="images/Q1.jpg" style="width:100%" onmouseover="currentSlide(1)" alt="Farmers Walk"> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        </div>
+          
+        <div class="column">
+          <img class="demo cursor" src="images/Q2.jpg" style="width:100%" onmouseover="currentSlide(2)" alt="warm up weights"> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        </div>
+          
+        <div class="column">
+          <img class="demo cursor" src="images/Q3.jpg" style="width:100%" onmouseover="currentSlide(3)" alt="Preparing for cooldown"> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        </div>
+          
+        <div class="column">
+          <img class="demo cursor" src="images/Squat.jpg" style="width:100%" onmouseover="currentSlide(4)" alt="Squat Rack Attack">
+        </div>
+          
+        <div class="column">
+          <img class="demo cursor" src="images/Q5.jpg" style="width:100%" onmouseover="currentSlide(5)" alt="Deadlifting fun"> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        </div>
+          
+        <div class="column">
+          <img class="demo cursor" src="images/Q6.jpg" style="width:100%" onmouseover="currentSlide(6)" alt="Pull Ups"> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        </div>
+      </div>
+             </div>
+             <footer id="zip">
+          
+        
+           <h1>Zip Code Details</h1>
+            <p id="codeDetails">Inagh, Postal Code V95, County Ballyea, Region Clare, State Munster</p>
+            <p>Copyright of Jason Price@2022</p>
+            <p>K00268716</p>
+            <p id="date"></p>
+     
+         
+           
+        </footer>
+             
+        </div>
+            
+         <script>
+    let slideIndex = 1; //setting beggining of slideshow to 1 
+     showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n); // n is adding to the slide index when image is swiped causing it to move to next 
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n); // n is equal to slide index meaning it is on the current slide
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("demo");
+      let captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1} //if you go beyond the index it sets it back to first image
+      if (n < 1) {slideIndex = slides.length} // if n is less than 1 meaning you have swiped to previous it takes you to the last slide  
+      for (i = 0; i < slides.length; i++) { 
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");  //setting current image to active in the demo below large image 
+      }
+      slides[slideIndex-1].style.display = "block"; 
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt; //captions the image 
+    }
+    </script>
+        
+        <br>
+         
+    
+          
+    
+    </body>
+</html>

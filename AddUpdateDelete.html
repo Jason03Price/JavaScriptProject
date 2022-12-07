@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Inagh Weightlifting</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+         <link rel="icon" type="image/x-icon" href="images/Logo%20500x500%20px.jpeg">
+        
+        <link rel="stylesheet" href="CSS/Styles.css">
+      
+      <style>
+            #listDiv,#addForm,#editForm{display: none}
+        </style>
+   
+      
+    </head>
+    <body>
+      
+   
+         
+             <header>
+         <div class="topnav" id="myTopNav">
+        <a href="index.html">Home</a>
+         <a href="LoginOrSignUp.html">Login/SignUp</a>
+        <a href="news.html" >Events</a>
+        <a href="Images.html">Pictures</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="Links.html">Useful Info</a>
+             
+             <a href="Index.html"><img src="images/logo2.jpg" alt="Logo" id="logoIcon"></a> 
+             
+           <div class="search-container">
+  <div class="search-icon-btn">
+    <i class="fa fa-search"></i>
+  </div>
+  <div class="search-input">
+    <input type="search" class="search-bar" placeholder="Search...">
+  </div>
+</div>
+             
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>    
+        </a>
+          
+        </div>
+        </header>
+
+
+
+
+ 
+        
+        <div class="grid-containerAssignment">
+            
+            
+            <div class="jumbotron">
+
+                
+                <form id="addForm" class="form-inline mb-3 mt-3">
+                    <h2>Add item</h2>
+                    <input id="edit-name" type="text" class="form-control mr-2" placeholder="Name">
+                    <input id="edit-price" type="text" class="form-control mr-2" placeholder="Price">
+                    <input type="submit" class="btn btn-dark" value="Submit">
+                </form>
+              
+
+                
+                <form id="editForm" class="form-inline mb-3 mt-3">
+                    <h2>Edit item</h2>
+                    <input id="new-edit-name" type="text" class="form-control mr-2" placeholder="Name">
+                    <input id="new-edit-price" type="text" class="form-control mr-2" placeholder="Price">
+                    <input type="submit" class="btn btn-dark" value="Submit">
+                </form>
+                
+
+               
+                <div id="listDiv">
+                    <h2>Item list</h2>
+                    <ul id="items" class="list-group">
+
+                        <li class="list-group-item d-flex flex-column">
+                            <p class="myPara">Dumbells</p>
+                            <span>$50</span>
+                            <button  class="btn btn-danger btn-sm delete mt-3 mb-3" style="width: 60px;">X</button>
+                            <span class="editIcon"><i class="fa fa-edit"></i></span>
+                            <span class="favoriteIcon"><i class="fa fa-heart"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex flex-column">
+                            <p class="myPara">Bands</p>
+                            <span>$20</span>
+                            <button  class="btn btn-danger btn-sm delete mt-3 mb-3" style="width: 60px;">X</button>
+                            <span class="editIcon"><i class="fa fa-edit"></i></span>
+                            <span class="favoriteIcon"><i class="fa fa-heart"></i></span>
+                        </li>
+                        <li class="list-group-item d-flex flex-column">
+                            <p class="myPara">Shorts</p>
+                            <span>$30</span>
+                            <button  class="btn btn-danger btn-sm delete mt-3 mb-3" style="width: 60px;">X</button>
+                            <span class="editIcon"><i class="fa fa-edit"></i></span>
+                            <span class="favoriteIcon"><i class="fa fa-heart"></i></span>
+                        </li>
+                    </ul>
+                   
+                </div>
+                
+            </div>
+            
+             <footer id="zip">
+          
+        
+           <h1>Zip Code Details</h1>
+            <p id="codeDetails">Inagh, Postal Code V95, County Ballyea, Region Clare, State Munster</p>
+            <p>Copyright of Jason Price@2022</p>
+            <p>K00268716</p>
+            <p id="date"></p>
+     
+         
+           
+        </footer>
+
+            
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        
+             <script>
+            function $(selector) {
+        return document.querySelector(selector)
+}
+
+
+
+
+let jumbotronDiv = $('.jumbotron') // assign main div class to jumboTronDiv
+
+// btn group
+let btnGroupDiv = document.createElement('div') //giving a variable to the div 
+btnGroupDiv.className = 'btn-group d-flex justify-content-around' //floats button to desired areas 
+
+
+//load btn
+let loadBtn = document.createElement('button') // creating a load button
+loadBtn.setAttribute('id','load') //Setting attributes to id and load
+loadBtn.className = ('btn btn-primary') // giving the btn a classname
+loadBtn.innerHTML = ('Load') //setting the inner html to display Load
+
+// new item btn
+let newBtn = document.createElement('button') //creating new item button
+newBtn.setAttribute('id', 'new-data') //setting attributes
+newBtn.className = 'btn btn-primary' // giving the new item button a class name
+newBtn.innerHTML = 'New Item' //Setting the text to display
+
+
+btnGroupDiv.appendChild(loadBtn) //appending elements to move so they can both be displayed
+btnGroupDiv.appendChild(newBtn)
+
+jumbotronDiv.appendChild(btnGroupDiv)
+
+let addForm = document.getElementById('addForm') //gathering elements
+let editForm = document.getElementById("editForm");
+let listDiv = document.getElementById('listDiv')
+let itemList = document.getElementById('items')
+let head = document.getElementById('head')
+
+
+let jumbotronStyle = {
+        margin : '30px auto',
+}
+
+Object.assign(jumbotronDiv.style,jumbotronStyle) //assigning said style
+
+
+
+window.onload = function(){ //on window loading display no styles
+        newBtn.style.display = 'none'
+        addForm.style.display = 'none'
+        listDiv.style.display = 'none'
+        editForm.style.display = "none"
+
+        // to load event
+        loadBtn = $('#load')
+        loadBtn.onclick = function () { // on button execution load some information such as the list and new button while hiding other information
+                jumbotronDiv.insertBefore(addForm, listDiv)
+                jumbotronDiv.insertBefore(btnGroupDiv, listDiv)
+                listDiv.style.display = 'block'
+                addForm.style.display = ' none'
+                editForm.style.display = ' none'
+                newBtn.style.display = 'block'
+        }
+        // to add item
+
+        addForm.addEventListener('submit', addItem) //adding a submit listener
+
+        newBtn.addEventListener('click', openModal) //adding an event listener to open modal 
+
+        function openModal() { //creating the openModal function which opens the add new items screen
+                jumbotronDiv.insertBefore(addForm, listDiv)
+                jumbotronDiv.insertBefore(btnGroupDiv, addForm)
+                addForm.style.display = 'block'
+                editForm.style.display = ' none'
+        }
+
+        function addItem(e) {
+                e.preventDefault()
+
+                listDiv.style.display = 'block' //displayes the list div
+
+                 
+                let editName = document.getElementById('edit-name').value //getting variables
+                let editPrice = document.getElementById('edit-price').value
+
+                //creat li
+                let newLi = document.createElement('li')
+                newLi.className = 'list-group-item d-flex flex-column'
+
+                //creat p of li
+                let newP = document.createElement('p')
+                newP.appendChild(document.createTextNode(editName))
+                newLi.appendChild(newP)
+
+                //creat span of li
+                let newSpan = document.createElement('span')
+                newSpan.appendChild(document.createTextNode(editPrice))
+                newLi.appendChild(newSpan) //allowing for changable price
+
+                //creat extra feature item
+
+                // delete btn
+                let deleteBtn = document.createElement('button')
+                deleteBtn.className = 'btn btn-danger btn-sm delete mt-3 mb-3'
+                deleteBtn.style.width = '60px'
+                deleteBtn.appendChild(document.createTextNode('X'))
+                newLi.appendChild(deleteBtn)
+
+                // edit btn
+                let editBtn = document.createElement('span')
+                let editIcon = document.createElement('i')
+                editIcon.className = 'fa fa-edit'
+                editBtn.appendChild(editIcon)
+                newLi.appendChild(editBtn)
+
+                // favorite btn
+                let favoriteBtn = document.createElement('span')
+                let favoriteIcon = document.createElement('i')
+                favoriteIcon.className = 'fa fa-heart'
+                favoriteBtn.appendChild(favoriteIcon)
+                newLi.appendChild(favoriteBtn)
+
+
+                //add list to ul
+                itemList.appendChild(newLi)
+
+        }
+
+        // delete event
+        itemList.addEventListener('click', removeItem)
+
+        function removeItem(e) {
+                if (e.target.classList.contains('delete')) {
+                                let li = e.target.parentElement
+                                itemList.removeChild(li)
+                        
+                }
+
+        }
+
+        //  edit event
+        itemList.addEventListener("click", editItem);
+
+        function editItem(e) {
+                if (e.target.classList.contains("fa-edit")) {
+                        addForm.style.display = ' none'
+                        e.preventDefault()
+
+                        editForm.style.display = "block"
+                        jumbotronDiv.insertBefore(btnGroupDiv, editForm)
+
+                        let editName = document.getElementById('new-edit-name').value
+                        let editPrice = document.getElementById('new-edit-price').value
+
+                        let editPara = e.target.document.getElementById("myPara")
+                      
+                        console.log(editPara)
+                  
+                      
+
+                }
+        }
+}
+        </script>
+        
+    </body>
+</html>

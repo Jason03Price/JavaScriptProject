@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="en"> 
+     <head>
+         
+         <meta charset="utf-8">
+         
+        <title>Inagh Weightlifting</title>
+         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+        <link rel="stylesheet" href="CSS/Styles.css">
+         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         
+         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+         
+        <link rel="icon" type="image/x-icon" href="images/Logo%20500x500%20px.jpeg">
+         
+          <script> //Function to control nav bar
+    function myFunction(){
+        var x = document.getElementById("myTopNav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className= "topnav";
+        }
+    }   
+         </script>
+        
+         
+    <script>
+              
+    function validate() { //validation for sign up sheet
+             var name_val = document.getElementById("name").value;
+            if (name_val == null || name_val == "") {
+                document.getElementById("nameError").innerHTML = "Enter a name to continue";
+                return false;
+            } else document.getElementById("nameError").innerHTML = "*";
+			
+    
+            var email_val = document.getElementById("email1").value;
+            if (email_val == null || email_val == "") {
+                alert("Please enter your email.");
+                return false;
+            }
+            var emailx = document.getElementById("email1").value;
+            var retype = document.getElementById("email2").value;
+            if(emailx != retype){
+                alert("Please re-enter email correctly");
+                return false;
+            }
+            return true;
+            }
+    
+    </script>
+       
+  
+    </head>
+    <body>
+        
+         <div class="topnav" id="myTopNav">
+          <a href="index.html" >Home</a>
+         <a href="LoginOrSignUp.html">Login/SignUp</a>
+        <a href="news.html">Events</a>
+        <a href="Images.html">Pictures</a>
+        <a href="ContactUs.html" class="active">Contact Us</a>
+         <a href="Links.html">Useful Info</a>
+        
+             
+             <a href="Index.html"><img src="images/logo2.jpg" alt="Logo" id="logoIcon"></a> 
+             
+             <div class="search-container">
+  <div class="search-icon-btn">
+    <i class="fa fa-search"></i>
+  </div>
+  <div class="search-input">
+    <input type="search" class="search-bar" placeholder="Search...">
+  </div>
+</div>
+             
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>    
+        </a>
+  
+        </div>
+
+        <header>
+     
+             
+        </header>
+ <form action="#" method="post" id="detailsForm" onsubmit="return validate();" novalidate >
+     
+      
+     <div class="grid-containerSignUp">
+     
+        
+   <a href="images/GymEquip.jpg"><img src="images/GymEquip.jpg" alt="The equipment displayed in the Inagh Weightlifting Gym" id="Inagh"></a> 
+         
+         
+        <label for="name" class="col1" >Name:</label><a id="nameError">*</a><input type="text" name ="name" class="col2" size="23" required id="name" placeholder="Name" >
+  
+     
+     <br>
+   
+        
+        <label for="address" class="col1">Address:</label><textarea id="address" class="col2" name="address" rows="6" cols="50" placeholder="Address" ></textarea> 
+     <br>
+ 
+      
+   
+        
+      <label for="email1" class="col1">Email:</label><input type="email" class="col2" name ="email1" size="23" id="email1" placeholder="email"  onkeyup="checkPass();">
+    <span></span><!-- This is an example of the ID Selector !-->
+
+
+     <br>
+         
+        
+        <label for="email2" class="col1">Retype your Email:</label><input type="email" name ="email2" class="col2" size="23" id="email2"  placeholder="Retype Email" onkeyup="checkPass();" > 
+        <span></span>
+        <!-- This is an example of the ID Selector !-->
+         
+       <br>
+           
+              <label for="mobile" class="col1">Mobile:</label><input class="col2" name ="mobile" size="23" id="mobile" pattern="(08)(3|5||6|7|9)\d{7}" placeholder="Must start with 08(3,5,6,7,9)" >
+                <span></span>
+ <br>
+        
+        <label for="submit" class="col1"></label><input type="Submit" value="Submit" name="submit" id="submit">  
+         
+         
+       </div>
+        
+        </form>
+        
+        
+        
+        
+        <footer id="zip">
+            
+         <h1>Zip Code Details</h1>
+            <p id="codeDetails">Inagh, Postal Code V95, County Ballyea, Region Clare, State Munster</p>
+            <p>Copyright of Jason Price@2022</p>
+            <p>K00268716</p>
+            <p id="date"></p>
+        </footer>
+        <script>
+    
+    mobile.onkeydown = function(){ //validation to check if number entered is of a current number
+        let span = document.getElementsByTagName('span');
+        const regexn = /^[(087)[0-9]{10}$/; //form validating for mobile phone numbers
+        if (regexn.test(mobile.value))
+        {
+            span[2].innerText = "Your number is valid"; //text to show correctly entered info 
+            span[2].style.color = 'green';// turns green
+         
+        }
+        else
+        {
+         span[2].innerText = "Your number is invalid"; //text goes to red if number is invalid
+         span[2].style.color = 'red';
+     
+        }
+    }
+    email1.onkeydown = function(){
+        let span = document.getElementsByTagName('span');
+        const regex = /^([\.\_a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-zA-Z]){2,8}$/;
+        if (regex.test(email1.value))
+            {
+                span[0].innerText = "Email is valid";
+                span[0].style.color = 'green';
+            }else{
+                span[0].innerText = "Email is invalid add @ symbol and .com";
+                span[0].style.color = 'red';
+            }
+    }
+    
+
+
+</script>
+
+<script type="text/javascript"> //To turn colors red if retyped email is incorrect or green if correct
+        function checkPass()
+        {
+    var emails = document.getElementById('email1');
+    var confirm  = document.getElementById('email2');
+
+    var good_color = "#66cc66";
+    var bad_color  = "#ff6666";
+
+    if(emails.value == confirm.value){
+       
+        confirm.style.backgroundColor = good_color;
+        message.style.color = good_color;
+
+    }else{
+        confirm.style.backgroundColor = bad_color;
+        message.style.color = bad_color;
+       
+    }
+}  
+</script>
+        
+    </body>
+</html>
+
+
+
+
+    
+

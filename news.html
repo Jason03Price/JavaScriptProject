@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+   
+   <head>
+       
+    <title>Inagh Weightlifting</title>   
+       
+      <meta charset="utf-8"> 
+       
+    <meta name="viewport" content ="width=device-width, initial scale=1.0">
+       
+   <link rel="stylesheet" href="CSS/Styles.css">
+       
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+       <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+       
+     <link rel="icon" type="image/x-icon" href="images/Logo%20500x500%20px.jpeg">
+    <script>
+    function myFunction(){ //Function to control nav bar
+        var x = document.getElementById("myTopNav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className= "topnav";
+        }
+    }
+         $(function() {
+     n = new Date();
+     y = n.getFullYear();
+     m = n.getMonth() + 1;
+     d = n.getDate();
+     document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    });
+    </script>
+       
+       
+   </head>    
+    
+    
+    
+ <body>
+ 
+     <header>
+         <div class="topnav" id="myTopNav">
+        <a href="index.html">Home</a>
+         <a href="LoginOrSignUp.html">Login/SignUp</a>
+        <a href="news.html" class="active">Events</a>
+        <a href="Images.html">Pictures</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="Links.html">Useful Info</a>
+             
+             <a href="Index.html"><img src="images/logo2.jpg" alt="Logo" id="logoIcon"></a> 
+             
+           <div class="search-container">
+  <div class="search-icon-btn">
+    <i class="fa fa-search"></i>
+  </div>
+  <div class="search-input">
+    <input type="search" class="search-bar" placeholder="Search...">
+  </div>
+</div>
+             
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>    
+        </a>
+              <div class="container">
+  
+</div>
+        </div>
+      
+
+
+     </header>
+
+     
+ 
+       <br>
+     
+    <div class="grid-containerAssignment">
+
+        <div class="headerText">
+        
+            <h1>Inagh Weightlifting Events!</h1>
+
+            <p>Welcome to the events page of Inagh Weightlifting! As you scroll below news updates on meets, training schedule's and classes will be here. Enjoy.</p>
+            
+        </div>
+        
+        <h1 id="time">Time Change!</h1>
+        
+         <div class="clock">
+             <div class="outer-clock-face">
+                 <div class="marking marking-one"></div>
+        <div class="marking marking-two"></div>
+        <div class="marking marking-three"></div>
+        <div class="marking marking-four"></div>
+        <div class="inner-clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+          </div>
+        </div> 
+
+        </div>
+        
+        
+        <p id="Change">As of May 1st the time of current meets will be changed to 19:30</p>
+        
+      
+        
+        <p id="demo"></p>
+
+        <script>
+    
+        var countDownDate = new Date("December 31, 2022 19:30:00").getTime();
+
+      
+        var x = setInterval(function() {
+
+         
+          var now = new Date().getTime();
+
+         
+          var distance = countDownDate - now;
+
+          
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("demo").innerHTML = "This change will be in " +days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+      
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Change implemented";
+          }
+        }, 1000);
+        </script>
+        
+         <div class="OtherNews">
+        
+            <h1>Other Events!</h1> 
+        </div>
+        
+     <ul>
+        <li class="Onews">Training this year will be focused on Hypertrophy (building muscle)</li>
+      
+        <li class="Onews">Classes on functional weightlifting are now available on Thursdays at 6 p.m</li>
+       
+        <li class="Onews">Scheduled training for competition season this year will be at 5pm on Mondays and Fridays</li>
+    
+      </ul>
+        
+        <footer id="zip">
+          
+        
+           <h1>Zip Code Details</h1>
+            <p id="codeDetails">Inagh, Postal Code V95, County Ballyea, Region Clare, State Munster</p>
+            <p>Copyright of Jason Price@2022</p>
+            <p>K00268716</p>
+            <p id="date"></p>
+     
+         
+           
+        </footer>
+     
+   </div>
+     
+     <script>
+        //setting times
+        const secondHand = document.querySelector('.second-hand'); //setting variables
+        const minsHand = document.querySelector('.min-hand');
+        const hourHand = document.querySelector('.hour-hand');
+
+         function setDate() {
+          const now = new Date(); //establishing current hours minutes and seconds 
+
+          const seconds = now.getSeconds();
+          const secondsDegrees = ((seconds / 60) * 360) + 90; //dividing seconds by 60 as this is a full minute and multiply by the 360 degrees of the clock
+          secondHand.style.transform = `rotate(${secondsDegrees}deg)`; //Used to rotate the hand 
+
+          const mins = now.getMinutes();
+          const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90; // dividing minutes by a full minute and multipying by 360 degrees of a clock 
+          minsHand.style.transform = `rotate(${minsDegrees}deg)`; //used to rotate minutes hand
+
+          const hour = now.getHours();
+          const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90; // dividing hour by 12 and multiplying by 360 degrees 
+          hourHand.style.transform = `rotate(${hourDegrees}deg)`; // used to rotate the hours hand
+        }
+
+        setInterval(setDate, 1000); // calling for a rotation every 1000 milliseconds or 1 second
+
+        setDate();
+     
+     </script>
+   
+ </body>   
+    
+
+</html>

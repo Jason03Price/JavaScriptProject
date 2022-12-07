@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+   
+   <head>
+       
+    <title>Inagh Weightlifting</title>   
+       
+      <meta charset="utf-8"> 
+       
+    <meta name="viewport" content ="width=device-width, initial scale=1.0">
+       
+   <link rel="stylesheet" href="CSS/Styles.css">
+       
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+       
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+     <link rel="icon" type="image/x-icon" href="images/Logo%20500x500%20px.jpeg">
+    <script>
+    function myFunction(){ //Function to control nav bar
+        var x = document.getElementById("myTopNav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className= "topnav";
+        }
+    } 
+         $(function() {
+     n = new Date();
+     y = n.getFullYear();
+     m = n.getMonth() + 1;
+     d = n.getDate();
+     document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    });
+        
+    </script>
+    <script>
+        $(document).ready(function() {
+    $(".set > a").on("click", function() {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this)
+        .siblings(".content")
+        .slideUp(200);
+      $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+    } else {
+      $(".set > a i")
+        .removeClass("fa-minus")
+        .addClass("fa-plus");
+      $(this)
+        .find("i")
+        .removeClass("fa-plus")
+        .addClass("fa-minus");
+      $(".set > a").removeClass("active");
+      $(this).addClass("active");
+      $(".content").slideUp(200);
+      $(this)
+        .siblings(".content")
+        .slideDown(200);
+    }
+  });
+});
+       
+    </script>
+  
+       
+       
+   </head>    
+    
+    
+    
+ <body>
+     
+ 
+     <header>
+         <div class="topnav" id="myTopNav">
+        <a href="index.html" class="active">Home</a>
+         <a href="LoginOrSignUp.html">Login/SignUp</a>
+        <a href="news.html">Events</a>
+        <a href="Images.html">Pictures</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="Links.html">Useful Info</a>
+        
+        <a href="Index.html"><img src="images/logo2.jpg" alt="Logo" id="logoIcon"></a> 
+             
+               <div class="search-container">
+  <div class="search-icon-btn">
+    <i class="fa fa-search"></i>
+  </div>
+  <div class="search-input">
+    <input type="search" class="search-bar" placeholder="Search...">
+  </div>
+</div>
+             
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>    
+        </a>
+             
+         
+             
+       
+</div>
+
+ 
+        
+      
+       <a href="images/dumbbells.jpg"><img src="images/dumbbells.jpg" alt="The heavy rack of dumbbells in the Inagh Athletics facility" id="dumbbell"></a> 
+
+
+     </header>
+
+     
+ 
+       <br>
+     
+    <div class="grid-containerAssignment">
+
+
+
+        <div class="headerText">
+        
+            <h1>Welcome to Inagh Weightlifting!</h1>
+
+            <p>Welcome to the official site of Inagh Athletics. A group which aims to teach the people of Inagh good technique within weightlifting and dieting and also how to build muscle safely and effeciently. On this website you will find pictures of our gym and equipment along with things such as news on meets, lectures etc, but also useful links which provide futher information in on the sport. If this interests you don't be afraid to sign up and get to our facility!</p>
+        </div>
+
+        
+       
+
+
+        <div class="Levels">
+            <h2>Training Levels Taught</h2>
+        </div>
+        
+        <article class="begin" id="begin"><h3 class="classes">Beginner</h3><img src="images/beginner.jpg" alt="A man training at midnight in a sports arena" class="beginner"></article> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        
+       <article class="int" id="intermediate"><h3 class="classes">Intermediate</h3><img src="images/Intermediate.jpg" alt="an intermeddiate weightlifter attempting a barbell squat" class="intermediate"></article> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        
+        <article class="adv" id="advanced"><h3 class="classes">Advanced</h3><img src="images/Advanced.jpg" alt="An experienced weightlifter doing bicep curls" class="advanced"></article> <!-- This image was taken from https://www.pexels.com/search/workout/ -->
+        
+        <br>
+       
+        <h2 id="explain">Explanation of levels</h2>
+        
+        <p id="explain2">How do you tell whether you're a beginner, intermediate or advanced lifter? To that we would say, great question! Many factors come into this such as how long you have been lifting.</p>
+        
+        <br>
+        
+        <div class="accordion-container">
+  <div class="set">
+    <a href="#">
+      Less than 6 months
+      <i class="fa fa-plus"></i>
+    </a>
+    <div class="content">
+      <p>you should consider the beggining programme as you most likely have little experience.</p>
+    </div>
+  </div>
+  <div class="set">
+    <a href=#>
+      6 months to 2 years
+      <i class="fa fa-plus"></i>
+    </a>
+    <div class="content">
+      <p> you would be considered intermediate as you have gained a decent amount of muscle along with understanding correct form.</p>
+    </div>
+  </div>
+  <div class="set">
+    <a href=#>
+      2 Years+
+      <i class="fa fa-plus"></i>
+    </a>
+    <div class="content">
+      <p>Advanced lifters are those who have been lifting more than 2 years and understand the mechanics of weightlifting along with having a significant amount of muscle. There are many more factors such as how much you can lift but if interested this will be provided within the links page.</p>
+    </div>
+  </div>
+  
+</div>
+        <h2>Some motivational Quotes!</h2>
+            <div class="quote-container" id="quote-container">
+        <!--Quote-->
+        <div class="quote-text">
+        <i class="fa fa-quote-left"></i>
+            <span id="quote"></span>
+              <i class="fa fa-quote-right"></i>
+        </div>
+            
+       <!--Author-->
+        <div class="quote-Author">
+        <span id="author"></span>
+        </div>
+       
+        <!--Buttons-->
+        <div class="button-container">
+        <button class="twitter-button" id="twitter" title="tweet this!">
+            <i class="fa fa-twitter"></i>
+        </button>
+            
+             <button class="insta-button" id="insta" title="Post this!">
+            <i class="fa fa-instagram"></i>
+        </button>
+            
+            <button id="new-quote">New quote</button>
+        </div>
+        </div>
+            <!--loader-->
+        <div class="loader" id="loader"></div>
+        
+        <br>
+        
+        <footer id="zip">
+          
+        
+           <h1>Zip Code Details</h1>
+            <p id="codeDetails">Inagh, Postal Code V95, County Ballyea, Region Clare, State Munster</p>
+            <p>Copyright of Jason Price@2022</p>
+            <p>K00268716</p>
+            <p id="date"></p>
+     
+         
+           
+        </footer>
+     
+   </div>
+       <script>
+                    const quoteContainer = document.getElementById('quote-Container');
+        const quoteText = document.getElementById('quote');
+        const authorText = document.getElementById('author');
+        const twitterBtn = document.getElementById('twitter');
+        const newQuoteBtn = document.getElementById('new-quote');
+        const instaBtn = document.getElementById('insta');
+
+        let apiQuotes=[];
+        function newQuote(){
+            const quote = apiQuotes[Math.floor(Math.random()*apiQuotes.length)];
+            //check if author field is blank
+            if(!quote.author){
+                authorText.textContent = 'Unknown';
+            }else{
+                authorText.textContent = quote.author;
+            }//check quote length to determine styling
+            if(quote.text.length>120){
+                quoteText.classList.add('long-quote');
+            }else{
+                quoteText.classList.remove('long-quote')
+            }
+            //set quote
+            quoteText.textContent = quote.text;
+        }
+        //Get quotes from API
+        async function getQuotes(){
+            const apiUrl = 'https://raw.githubusercontent.com/Jason03Price/Quotes/main/quotes.js';
+            try{
+                const response = await fetch(apiUrl);
+                apiQuotes = await response.json();
+                newQuote();
+            } catch (error){
+
+            }
+        }
+        //on load
+        getQuotes();
+
+        //Tweet Quote
+        function tweetQuote(){
+            const twitterUrl = 'https://twitter.com/intent/tweet?text=${quoteText.innerText} - ${authorText.innerText}';
+            window.open(twitterUrl,'_blank');
+        }
+        function postQuote(){
+            const instaUrl = 'https://www.instagram.com/';
+            window.open(instaUrl,'_blank');
+        }
+        //Event listeners
+        newQuoteBtn.addEventListener('click',newQuote);
+        twitterBtn.addEventListener('click', tweetQuote);
+        instaBtn.addEventListener('click', postQuote);
+        //on load
+        getQuotes();
+             </script>
+   
+ </body>   
+    
+
+</html>

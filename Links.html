@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+   
+   <head>
+       
+    <title>Inagh Weightlifting</title>   
+       
+      <meta charset="utf-8"> 
+       
+    <meta name="viewport" content ="width=device-width, initial scale=1.0">
+       
+   <link rel="stylesheet" href="CSS/Styles.css">
+       
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+      <link rel="icon" type="image/x-icon" href="images/Logo%20500x500%20px.jpeg">
+       
+       <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+       
+        <script>
+    function myFunction(){ //Function to control nav bar
+        var x = document.getElementById("myTopNav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className= "topnav";
+        }
+    }
+             $(function() {
+     n = new Date();
+     y = n.getFullYear();
+     m = n.getMonth() + 1;
+     d = n.getDate();
+     document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    });
+            
+    function calculate(){
+  //Need to determine the constant of some id functions.
+    var bmi;
+    var result = document.getElementById("result");
+  //The value of the height slider
+    var height = parseInt(document.getElementById("height").value);
+  //The value of the weight slider
+    var weight = parseInt(document.getElementById("weight").value);
+
+  //The value of height and width are displayed in the webpage using "textContent".
+    document.getElementById("weight-val").textContent = weight + " kg";
+    document.getElementById("height-val").textContent = height + " cm";
+
+// the formula for calculating BMI in "bmi"
+    bmi = (weight / Math.pow( (height/100), 2 )).toFixed(1);
+        
+  //With the help of textContent we have arranged to display in the result page of BMI
+    result.textContent = bmi;
+
+
+
+
+  //When the BMI is less than 18.5, you can see the text below
+    if(bmi < 18.5){
+        category = "Underweight";
+        result.style.color = "#ffc44d";
+    }
+
+  //If BMI is >=18.5 and <=24.9
+    else if( bmi >= 18.5 && bmi <= 24.9 ){
+        category = "Normal Weight";
+        result.style.color = "#0be881";
+    }
+
+  //If BMI is >= 25 and <= 29.9 
+    else if( bmi >= 25 && bmi <= 29.9 ){
+        category = "Overweight";
+        result.style.color = "#ff884d";
+    }
+
+  //If BMI is <= 30
+    else{
+        category = "Obese";
+        result.style.color = "#ff5e57";
+    }
+  //All of the above text is stored in "category".
+
+    document.getElementById("category").textContent = category;
+}
+    </script>
+      
+       
+       
+       
+   </head>    
+    
+    
+    
+ <body>
+     <header>
+      <div class="topnav" id="myTopNav">
+          <a href="index.html" >Home</a>
+         <a href="LoginOrSignUp.html">Login/SignUp</a>
+        <a href="news.html">Events</a>
+        <a href="Images.html">Pictures</a>
+        <a href="ContactUs.html">Contact Us</a>
+        <a href="Links.html" class="active">Useful Info</a>
+          
+          <a href="Index.html"><img src="images/logo2.jpg" alt="Logo" id="logoIcon"></a> 
+          
+         <div class="search-container">
+  <div class="search-icon-btn">
+    <i class="fa fa-search"></i>
+  </div>
+  <div class="search-input">
+    <input type="search" class="search-bar" placeholder="Search...">
+  </div>
+</div>
+          
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+         <i class="fa fa-bars"></i>    
+        </a>
+           
+        </div>
+     </header>
+     
+          
+     
+     <h1 id="links">Commonly asked Questions</h1>
+     
+     
+     
+     <div class="grid-containerAssignment">
+     
+         <article class="query1"><div class="question"><h3 class="color">When to add weight</h3></div><a href ="https://www.bodybuilding.com/content/when-should-you-increase-the-amount-of-weight-you-lift.html#:~:text=Use%20the%20%222%20for%202,consecutive%20workouts%2C%20increase%20the%20weight."><img src="images/BANDS.jpg" alt="bands for exercise in the sun" class="querys"></a></article>
+         
+         <article class="query2"><div class="question"><h3 class="color">What to eat</h3></div><a href ="https://www.ymcamidtn.org/health-and-fitness/articles/how-change-your-diet-when-you-start-lifting-weights#:~:text=Carbohydrates%20that%20have%20a%20low,with%20one%20tbsp%20peanut%20butter."><img src="images/BANDS.jpg" alt="bands for exercise in the sun" class="querys"></a></article>
+         
+         <article class="query3"><div class="question"><h3 class="color">how long to train</h3></div><a href ="https://www.livestrong.com/article/13767612-how-long-should-a-weight-lifting-workout-last/"><img src="images/BANDS.jpg" alt="bands for exercise in the sun" class="querys"></a></article>
+         
+         <article class="query1"><div class="question"><h3 class="color">Is cardio good for weightloss</h3></div><a href ="https://www.medicalnewstoday.com/articles/cardio-to-lose-weight"><img src="images/BANDS.jpg" alt="bands for exercise in the sun" class="querys"></a></article>
+         
+         <article class="query2"><div class="question"><h3 class="color">How to recover after exercise</h3></div><a href ="https://www.healthline.com/health/exercise-fitness/what-to-do-after-working-out"><img src="images/BANDS.jpg" alt="bands for exercise in the sun" class="querys"></a></article>
+         
+         <article class="query3"><div class="question"><h3 class="color">How much rest in between sets</h3></div><a href ="https://www.bodybuilding.com/content/how-long-should-you-rest-between-sets.html#:~:text=To%20increase%20strength%20and%20power,seconds%20or%20less%20between%20sets."><img src="images/BANDS.jpg" alt="bands for exercise in the sun" class="querys"></a></article>
+         
+         
+         
+         
+         <h2 id="Shape">Are You In Shape?</h2>
+         <article class="BMI"><div class="containerBMI">
+          <h1>BMI Calculator</h1>
+             <div class="display">
+               <p id="result">20.0</p>
+               <p id="category">Normal weight</p>
+                 <div class="row">
+                   <input type="range" min="20" max="200" value="20" id="weight" oninput="calculate()">
+                   <span id="weight-val">20 kg</span>    
+                </div>
+                <div class="row">
+              <input type="range" min="100" max="250" value="100" id="height" oninput="calculate()">
+              <span id="height-val">100 cm</span>
+            </div>
+            </div>
+        </div>
+        </article>
+         
+         <br>
+         <h2 id="Location">Where Are We Located?</h2>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9631.873846896642!2d-9.1767645!3d52.87698285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b0fce634f98df%3A0xa00c7a9973200a0!2sCarrowkeel%20East%2C%20Inagh%2C%20Co.%20Clare!5e0!3m2!1sen!2sie!4v1670344511056!5m2!1sen!2sie" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         
+         <br>
+         
+       <footer id="zip">
+          
+        
+           <h1>Zip Code Details</h1>
+            <p id="codeDetails">Inagh, Postal Code V95, County Ballyea, Region Clare, State Munster</p>
+            <p>Copyright of Jason Price@2022</p>
+            <p>K00268716</p>
+           <p id="date"></p>
+     
+         
+           
+        </footer>
+     
+     </div>
+     
+ </body>   
+    
+
+</html>
